@@ -123,4 +123,4 @@ bot.on('message', msg =>{
 })
 
 // BOT LOGIN
-bot.login(token);
+bot.login(process.env.token);
