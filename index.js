@@ -122,5 +122,19 @@ bot.on('message', msg =>{
 
 })
 
+bot.on('message', msg =>{
+    if(msg.content === 'Giang'){
+        msg.channel.sendMessage('https://cdn.discordapp.com/attachments/662294088414003210/664440569170231336/610ExKxeaGL._AC_SX522_.jpg')
+    }
+
+})
+
+bot.on('message', msg =>{
+    if(msg.content === 'ha giang'){
+        msg.channel.sendMessage('https://cdn.discordapp.com/attachments/662294088414003210/664440569170231336/610ExKxeaGL._AC_SX522_.jpg')
+    }
+
+})
+
 // BOT LOGIN
 bot.login(process.env.token);
