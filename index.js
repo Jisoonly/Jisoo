@@ -31,18 +31,11 @@ bot.on('message', msg =>{
 })
 
 bot.on('message', msg=>{
-    if(msg.content === "chao ae"){
-        msg.channel.sendMessage('chao cai lon')
+    if(msg.content === "ha giang"){
+        msg.channel.sendMessage('dit con me may giang')
    }
 
 })
-
-bot.on('message', msg=>{
-    if(msg.content === "owner"){
-        msg.channel.sendMessage('Con ai vao day nua hoi cai lon a')
-    }
-        
-    })
 
 bot.on('message', msg => {
     if(msg.content === "ping"){
@@ -124,13 +117,6 @@ bot.on('message', msg =>{
 
 bot.on('message', msg =>{
     if(msg.content === 'Giang'){
-        msg.channel.sendMessage('https://cdn.discordapp.com/attachments/662294088414003210/664858230429581384/9-1_Opt.jpg')
-    }
-
-})
-
-bot.on('message', msg =>{
-    if(msg.content === 'ha giang'){
         msg.channel.sendMessage('https://cdn.discordapp.com/attachments/662294088414003210/664858230429581384/9-1_Opt.jpg')
     }
 
