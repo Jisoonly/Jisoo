@@ -38,8 +38,8 @@ bot.on('message', msg=>{
 })
 
 bot.on('message', msg => {
-    if(msg.content === "@giang"){
-        msg.channel.sendMessage('dit con me may giang')
+    if(msg.content === "ping"){
+        msg.channel.sendMessage('pong!')
     }
 })
 
