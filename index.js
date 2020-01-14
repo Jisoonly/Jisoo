@@ -18,8 +18,8 @@ bot.on('message', msg=>{
 })
 
 bot.on('message', msg=>{
-    if(msg.content === "Xin chao"){
-        msg.channel.sendMessage('chao cai lon')
+    if(msg.content === "dit con me may"){
+        msg.channel.sendMessage('giang')
    }
 
 })
