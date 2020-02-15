@@ -1,0 +1,101 @@
+const Discord = require('discord.js');
+const bot = new Discord.Client();
+const {Client, RichEmbed} = require('discord.js');
+const client = new Client();
+const prefix = 'j!';
+
+const fs = require('fs');
+bot.commands = new Discord.Collection();
+
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+    const command = require(`./commands/${file}`);
+
+    bot.commands.set(command.name, command);
+}
+
+bot.on('ready', ()  =>{
+    console.log('Jisoo is online!');
+    bot.user.setActivity('BlackPink', {type: 'LISTENING'}).catch(console.error);
+})
+
+bot.on('message', msg=>{
+    if(msg.content === "ha giang"){
+        msg.channel.sendMessage('dit con me may giang')
+   }
+
+})
+
+bot.on('message', msg=>{
+    bot.commands.get('xin chao').execute(msg);
+   })
+
+
+bot.on('message', msg =>{
+    bot.commands.get('tri').execute(msg);
+})
+
+
+bot.on('message', msg=>{
+    bot.commands.get('owner').execute(msg);
+        
+    })
+
+bot.on('message', msg => {
+    bot.commands.get('ping').execute(msg);
+})
+
+bot.on('message', message => {
+    let args = message.content.substring(prefix.length).split(" ");
+
+    switch(args[0]) {
+        case'kick':
+    bot.commands.get('kick').execute(message, args);
+        break;
+    }
+})
+
+bot.on('message', message => {
+
+    let args = message.content.substring(prefix.length).split(" ");
+
+    switch(args[0]){
+
+        case 'clear':
+    bot.commands.get('clear').execute(message, args);
+        break;
+    }
+})
+
+
+bot.on('message', message=> {
+    let args= message.content.substring(prefix.length).split(" ");
+
+    switch(args[0]){
+        case'help':
+        const embed = new RichEmbed()
+        .setTitle("Deo co gi dau")
+        .setColor(0xff33cc)
+        .setDescription("Lam lon gi co lenh ma xem bo m lam ra con bot chi de kick nguoi khac thoi")
+
+    message.author.send(embed);
+        break;
+    }
+})
+
+bot.on('message', msg =>{
+    if(msg.content === 'giang'){
+        msg.channel.send('https://cdn.discordapp.com/attachments/662294088414003210/664440569170231336/610ExKxeaGL._AC_SX522_.jpg')
+    }
+
+})
+
+bot.on('message', msg =>{
+    if(msg.content === 'Giang'){
+        msg.channel.sendMessage('https://cdn.discordapp.com/attachments/662294088414003210/664858230429581384/9-1_Opt.jpg')
+    }
+
+})
+
+// BOT LOGIN
+bot.login(token);
