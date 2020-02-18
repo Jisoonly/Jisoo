@@ -97,5 +97,32 @@ bot.on('message', msg =>{
 
 })
 
+
+bot.on('message', message =>{
+    let args = message.content.substring(PREFIX.length).split(" ");
+    switch(args[0]){
+        case "vote":
+            const Embed = new RichEmbed ()
+            .setColor (0xFFC300)
+            .setTitle("Vote")
+            .setDescription("Dung de tao vote deo vote la bu lon do con")
+
+            if(!args[1]){
+                message.channel.send(Embed);
+                break;
+            }
+
+            let msgArgs = args.slice(1).join(" ");
+
+            message.channel.send("📝" + "**" + msgArgs + "**").then(messageReaction => {
+                messageReaction.react("👍");
+                messageReaction.react("👎");
+                message.delete(500).catch(console.error);
+            })
+
+        break;
+    }
+})
+
 // BOT LOGIN
 bot.login(process.env.token);
