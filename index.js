@@ -103,7 +103,7 @@ bot.on('message', message =>{
     switch(args[0]){
         case "vote":
             const Embed = new RichEmbed ()
-            .setColor (0xFFC300)
+            .setColor (0xff33cc)
             .setTitle("Vote")
             .setDescription("Dung de tao vote deo vote la bu lon do con")
 
