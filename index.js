@@ -99,7 +99,7 @@ bot.on('message', msg =>{
 
 
 bot.on('message', message =>{
-    let args = message.content.substring(PREFIX.length).split(" ");
+    let args = message.content.substring(prefix.length).split(" ");
     switch(args[0]){
         case "vote":
             const Embed = new RichEmbed ()
