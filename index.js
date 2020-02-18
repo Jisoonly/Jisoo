@@ -22,7 +22,7 @@ bot.on('ready', ()  =>{
 const giang = ["giang"];
 bot.on('message', message => {
     if( giang.some(word => message.content.includes(word))){
-        message.channel.send("dit con me may Giang")
+        message.channel.send("dit con me may zang")
     }
 })
 
@@ -33,6 +33,14 @@ bot.on('message', message => {
     }
 })
 
+const Giang = ["Giang"];
+bot.on('message', message => {
+    if( Giang.some(word => message.content.includes(word))){
+        message.channel.send("dit con me may zang")
+    }
+})
+
+
 bot.on('message', msg =>{
     bot.commands.get('tri').execute(msg);
 })
@@ -42,10 +50,6 @@ bot.on('message', msg=>{
     bot.commands.get('owner').execute(msg);
         
     })
-
-bot.on('message', msg => {
-    bot.commands.get('ping').execute(msg);
-})
 
 bot.on('message', message => {
     let args = message.content.substring(prefix.length).split(" ");
