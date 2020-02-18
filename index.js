@@ -90,14 +90,6 @@ bot.on('message', msg =>{
 
 })
 
-bot.on('message', msg =>{
-    if(msg.content === 'Giang'){
-        msg.channel.sendMessage('https://cdn.discordapp.com/attachments/662294088414003210/664858230429581384/9-1_Opt.jpg')
-    }
-
-})
-
-
 bot.on('message', message =>{
     let args = message.content.substring(prefix.length).split(" ");
     switch(args[0]){
