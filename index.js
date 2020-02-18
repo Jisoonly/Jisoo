@@ -19,17 +19,19 @@ bot.on('ready', ()  =>{
     bot.user.setActivity('BlackPink', {type: 'LISTENING'}).catch(console.error);
 })
 
-bot.on('message', msg=>{
-    if(msg.content === "ha giang"){
-        msg.channel.sendMessage('dit con me may giang')
-   }
-
+const giang = ["giang"];
+bot.on('message', message => {
+    if( giang.some(word => message.content.includes(word))){
+        message.channel.send("dit con me may Giang")
+    }
 })
 
-bot.on('message', msg=>{
-    bot.commands.get('xin chao').execute(msg);
-   })
-
+const jisoo = ["jisoo"];
+bot.on('message', message => {
+    if( jisoo.some(word => message.content.includes(word))){
+        message.channel.send("Thang nao nhac den bo m day")
+    }
+})
 
 bot.on('message', msg =>{
     bot.commands.get('tri').execute(msg);
