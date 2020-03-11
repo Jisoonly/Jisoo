@@ -21,6 +21,7 @@ bot.on('ready', ()  =>{
 
 const giang = ["giang"];
 bot.on('message', message => {
+    if(!message.member.hasPermission("ADMINISTRATOR", explicit = true)) 
     if( giang.some(word => message.content.includes(word))){
         message.channel.send("dit con me may zang")
     }
@@ -35,6 +36,7 @@ bot.on('message', message => {
 
 const Giang = ["Giang"];
 bot.on('message', message => {
+    if(!message.member.hasPermission("ADMINISTRATOR", explicit = true)) 
     if( Giang.some(word => message.content.includes(word))){
         message.channel.send("dit con me may zang")
     }
@@ -87,13 +89,6 @@ bot.on('message', message=> {
     message.author.send(embed);
         break;
     }
-})
-
-bot.on('message', msg =>{
-    if(msg.content === 'giang'){
-        msg.channel.send('https://cdn.discordapp.com/attachments/662294088414003210/664440569170231336/610ExKxeaGL._AC_SX522_.jpg')
-    }
-
 })
 
 bot.on('message', message =>{
