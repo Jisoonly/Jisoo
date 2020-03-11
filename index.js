@@ -21,7 +21,6 @@ bot.on('ready', ()  =>{
 
 const giang = ["giang"];
 bot.on('message', message => {
-    if(!message.member.hasPermission("ADMINISTRATOR", explicit = true)) return message.channel.send('Dit con me may ${user.tag}')
     if( giang.some(word => message.content.includes(word))){
         message.channel.send("dit con me may zang")
     }
@@ -36,7 +35,6 @@ bot.on('message', message => {
 
 const Giang = ["Giang"];
 bot.on('message', message => {
-    if(!message.member.hasPermission("ADMINISTRATOR", explicit = true)) return message.channel.send('Dit con me may ${user.tag}')
     if( Giang.some(word => message.content.includes(word))){
         message.channel.send("dit con me may zang")
     }
