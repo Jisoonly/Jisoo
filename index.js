@@ -19,10 +19,10 @@ bot.on('ready', ()  =>{
     bot.user.setActivity('BlackPink', {type: 'LISTENING'}).catch(console.error);
 })
 
-const giang = ["giang"];
+const xin = ["xin"];
 bot.on('message', message => {
-    if( giang.some(word => message.content.includes(word))){
-        message.channel.send("dit con me may zang")
+    if( xin.some(word => message.content.includes(word))){
+        message.channel.send("Đéo phải Tài N thì đéo cho")
     }
 })
 
@@ -30,13 +30,6 @@ const jisoo = ["jisoo"];
 bot.on('message', message => {
     if( jisoo.some(word => message.content.includes(word))){
         message.channel.send("Thang nao nhac den bo m day")
-    }
-})
-
-const Giang = ["Giang"];
-bot.on('message', message => {
-    if( Giang.some(word => message.content.includes(word))){
-        message.channel.send("dit con me may zang")
     }
 })
 
