@@ -26,6 +26,13 @@ bot.on('message', message => {
     }
 })
 
+const Mạnh = ["Mạnh"];
+bot.on('message', message => {
+    if( Mạnh.some(word => message.content.includes(word))){
+        message.channel.send("Địt mẹ thằng bê đê")
+    }
+})
+
 const jisoo = ["jisoo"];
 bot.on('message', message => {
     if( jisoo.some(word => message.content.includes(word))){
