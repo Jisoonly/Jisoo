@@ -22,7 +22,7 @@ bot.on('ready', ()  =>{
 const chis = ["chis"];
 bot.on('message', message => {
     if( xin.some(word => message.content.includes(word))){
-        message.channel.send(":chi:")
+        message.channel.send("<:chi:672389482720395274>")
     }
 })
 
