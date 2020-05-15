@@ -19,7 +19,7 @@ bot.on('ready', ()  =>{
     bot.user.setActivity('BlackPink', {type: 'LISTENING'}).catch(console.error);
 })
 
-bot.on('message', message => {
+bot.on('message', msg => {
     if(msg.content === "chis"){
         msg.channel.send('https://cdn.discordapp.com/attachments/662294088414003210/710908599534354502/Discord_2020-01-30_17-35-08.jpg');
     }
