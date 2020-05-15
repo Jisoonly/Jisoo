@@ -22,7 +22,8 @@ bot.on('ready', ()  =>{
 const chis = ["chis"];
 bot.on('message', message => {
     if( xin.some(word => message.content.includes(word))){
-        message.channel.send("<:chi:672389482720395274>")
+        message.channel.send("dit me thang chi 
+                             https://cdn.discordapp.com/attachments/662294088414003210/710908599534354502/Discord_2020-01-30_17-35-08.jpg")
     }
 })
 
