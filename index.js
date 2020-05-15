@@ -25,10 +25,9 @@ bot.on('message', msg => {
     }
 })
 
-const Mạnh = ["Mạnh"];
-bot.on('message', message => {
-    if( Mạnh.some(word => message.content.includes(word))){
-        message.channel.send("Địt mẹ thằng bê đê")
+bot.on('message', msg => {
+    if(msg.content === "shine"){
+        msg.channel.send('https://cdn.discordapp.com/attachments/662294088414003210/710911565066666004/41888.41000000001_Untitled.png');
     }
 })
 
