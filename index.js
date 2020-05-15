@@ -21,9 +21,9 @@ bot.on('ready', ()  =>{
 
 bot.on('message', message => {
     if(msg.content === "chis"){
-        msg.channel.send('https://cdn.discordapp.com/attachments/662294088414003210/710908599534354502/Discord_2020-01-30_17-35-08.jpg')
+        msg.channel.send('https://cdn.discordapp.com/attachments/662294088414003210/710908599534354502/Discord_2020-01-30_17-35-08.jpg');
     }
-}
+})
 
 const Mạnh = ["Mạnh"];
 bot.on('message', message => {
