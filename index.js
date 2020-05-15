@@ -19,10 +19,10 @@ bot.on('ready', ()  =>{
     bot.user.setActivity('BlackPink', {type: 'LISTENING'}).catch(console.error);
 })
 
-const xin = ["xin"];
+const chis = ["chis"];
 bot.on('message', message => {
     if( xin.some(word => message.content.includes(word))){
-        message.channel.send("Đéo phải Tài N thì đéo cho")
+        message.channel.send(":chi:")
     }
 })
 
