@@ -26,8 +26,8 @@ bot.on('message', msg => {
 })
 
 bot.on('message', msg => {
-    if(msg.content === "shine"){
-        msg.channel.send('https://cdn.discordapp.com/attachments/662294088414003210/710911565066666004/41888.41000000001_Untitled.png');
+    if(msg.content === "ai la con di cua anh nao"){
+        msg.channel.send('https://cdn.discordapp.com/attachments/662294088414003210/719168798615142480/image0.jpg');
     }
 })
 
