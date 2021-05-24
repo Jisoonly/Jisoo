@@ -25,19 +25,6 @@ bot.on('message', msg => {
     }
 })
 
-bot.on('message', msg => {
-    if(msg.content === "ai la con di cua anh nao"){
-        msg.channel.send('https://cdn.discordapp.com/attachments/662294088414003210/719168798615142480/image0.jpg');
-    }
-})
-
-const jisoo = ["jisoo"];
-bot.on('message', message => {
-    if( jisoo.some(word => message.content.includes(word))){
-        message.channel.send("Thang nao nhac den bo m day")
-    }
-})
-
 
 bot.on('message', msg =>{
     bot.commands.get('tri').execute(msg);
